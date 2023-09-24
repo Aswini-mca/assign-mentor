@@ -1,0 +1,50 @@
+1.Write API to create Mentor => '/create/mentor' =>post request
+Example to insert mentor:
+{
+    "mentorId":"1",
+    "name":"Sam",
+   "specialization": "Algorithms"
+    
+}
+2.Write API to create Student => '/create/student' =>post request
+Example to insert student:
+{
+    "studentId":"1",
+    "name":"John",
+    "course":"FSD",
+    "batch":"WD"
+}
+3.Write API to Assign a student to Mentor => '/assign/:studentId/:mentorId' =>post request
+Give studentId and mentorId
+   Example:
+   {
+   "studentId":"1",
+   "mentorId":"1"
+   }
+
+   --> Select one mentor and Add multiple Student => '/one-mentor-add-multiple-students' =>post request
+   Example:
+   {
+    "mentorId":"1",
+    "studentIds":["2","3"] 
+   }
+ 
+   -->A student who has a mentor should not be shown in List => '/students_without_mentor' =>get request
+
+4.Write API to Assign or Change Mentor for particular Student
+
+   -->Select One Student and Assign one Mentor  => '/assign_mentor_to_student' =>post request
+   Example:
+   {
+   "studentId":"1",
+   "mentorId":"1"
+   }
+
+5.Write API to show all students for a particular mentor => '/students_for_mentor/:mentorId' =>get request
+
+6.Write an API to show the previously assigned mentor for a particular student.
+   
+   => '/previous_mentor_for_student/:studentId' =>get request
+
+  to get students =>'/students'
+  to get mentors =>'/mentors'
