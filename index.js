@@ -1,6 +1,7 @@
 import express from "express";
 import { MongoClient } from "mongodb"
 import cors from "cors"
+import 'dotenv/config'
 const app = express()
 const PORT = 9000
 
@@ -11,7 +12,6 @@ app.use(cors())
 
 const MONGO_URL = "mongodb://127.0.0.1:27017"
 // process.env.MONGO_URL
-
 
 
 async function createConnection() {
